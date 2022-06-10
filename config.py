@@ -19,3 +19,12 @@ CHANNELS = {
     "https://t.me/jobsearchIT",
     "",
 }
+
+KEYWORDS = {
+    "python",
+    "golang",
+    "go lang",
+    "junior",
+    "trainee",
+}
+
