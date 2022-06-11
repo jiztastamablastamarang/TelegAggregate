@@ -1,3 +1,5 @@
+OFFSET_DAYS = 7
+
 CHANNELS = {
     "https://t.me/pythonrabota",
     "https://t.me/remotejobss",
@@ -23,6 +25,7 @@ CHANNELS = {
 KEYWORDS = {
     "python",
     "golang",
+    "#go"
     "go lang",
     "junior",
     "trainee",

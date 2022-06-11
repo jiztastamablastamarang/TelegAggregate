@@ -1,3 +1,4 @@
-snscrape
+# snscrape
 telethon
 pandas
+sqlalchemy
