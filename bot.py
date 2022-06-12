@@ -1,3 +1,5 @@
+import time
+
 from credentials import API_ID, API_HASH, MY_ID
 from telethon import TelegramClient
 
@@ -10,7 +12,7 @@ class Bot:
         with self.client:
             self.client.loop.run_until_complete(self.messenger(receiver=receiver, message=message))
 
-    def forward_message(self, channel, message_id):
+    def forward_message(self, channel: object, message_id: object) -> object:
         with self.client:
             self.client.loop.run_until_complete(self.forwarder(channel=channel, message_id=message_id))
 
@@ -19,3 +21,11 @@ class Bot:
 
     async def forwarder(self, channel, message_id):
         await self.client.forward_messages(entity=MY_ID, messages=message_id, from_peer=channel)
+
+
+if __name__ == '__main__':
+    bot = Bot(name="hugh")
+    message_id = 143840
+    channel = "uajobit"
+    bot.forward_message(channel=channel,
+                        message_id=message_id)

@@ -56,5 +56,8 @@ if __name__ == '__main__':
     bot = Bot(name="hugh")
 
     for _, row in data_unique.iterrows():
-        bot.forward_message(channel=row["channel"],
-                            message_id=row["message_id"])
+        try:
+            bot.forward_message(channel=row["channel"],
+                                message_id=row["message_id"])
+        except:
+            bot.send_message(message=row["message"])
